@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Portfolio</title>
+    <style>
+        /* Simple Google Font import */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        body {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            width: 30px;
+            height: 30px;
+            background-color: #4682B4;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        nav {
+            display: flex;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #555;
+        }
+        
+        nav a:hover {
+            color: #4682B4;
+        }
+        
+        .title {
+            font-size: 28px;
+            margin: 20px 0 10px;
+            font-weight: 600;
+            color: #4682B4;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #333;
+            border-bottom: 2px solid #4682B4;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        /* Portfolio items */
+        .portfolio-item {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 12px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .portfolio-item:hover {
+            border-color: #4682B4;
+        }
+        
+        .work-item, .education-item {
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .work-item strong, .education-item strong {
+            color: #4682B4;
+            font-weight: 600;
+        }
+        
+        .profile-link {
+            color: #4682B4;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        .profile-link:hover {
+            text-decoration: underline;
+        }
+        
+        .education-list {
+            list-style-type: none;
+            padding-left: 5px;
+            margin-top: 10px;
+        }
+        
+        .education-list li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .education-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4682B4;
+        }
+        
+        .reviews {
+            margin-top: 30px;
+        }
+        
+        .review-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .review-card {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .review-text {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .reviewer {
+            color: #777;
+            font-size: 13px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            padding: 15px 0;
+            border-top: 1px solid #ddd;
+        }
+        
+        /* Desktop layout */
+        @media (min-width: 768px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+            }
+            
+            .project-section {
+                grid-column: 1;
+            }
+            
+            .work-section {
+                grid-column: 2;
+            }
+            
+            .education-section {
+                grid-column: 3;
+            }
+            
+            .reviews {
+                grid-column: 1 / 4;
+            }
+            
+            .review-cards-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .review-card {
+                flex: 1;
+                max-width: 32%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <div class="logo">Zenno</div>
+            <div>Le Ba Khanh Hoang</div>
+        </div>
+        <nav>
+            <a href="#">Home</a> /
+            <a href="#">Projects</a> /
+            <a href="#">Articles</a> /
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    
+    <h1 class="title">Frontend Developer</h1>
+    <p class="subtitle">Welcome to my world</p>
+    
+    <div class="container">
+        <div class="project-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="portfolio-item">HTML Only Portfolio</div>
+            <div class="portfolio-item">Calculator</div>
+            <div class="portfolio-item">Quiz App</div>
+            <div class="portfolio-item">Countdown Timer</div>
+            <div class="portfolio-item">Product Upcoming Page</div>
+        </div>
+        
+        <div class="work-section">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="work-item">
+                <div><strong>readmap.uk</strong></div>
+                <div>Solved all the frontend projects</div>
+                <div><a href="#" class="https://github.com/Zeminy">Visit my Profile</a></div>
+            </div>
+            
+            <div class="work-item">
+                <div><strong>OpenSource Work</strong></div>
+                <div>Contributed to 50 opensource projects. Made my own projects with SSG/APIs/Node.</div>
+                <div><a href="#" class="https://github.com/Zeminy">Visit my GitHub Profile</a></div>
+            </div>
+        </div>
+        
+        <div class="education-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education">
+                <div>Studying in International University VNU.HCM the computing engineering have the enthusiasm to do all the things that boss call me to do  </div>
+            </div>
+            <div class="education-item">
+                <div>Courses I took:</div>
+                <ul class="education-list">
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Application</li>
+                    <li>Digital Logic Design</li>
+                    <li>Computer Network</li>
+                    <li>Database Management Systems</li>
+                    <li>Network Programming</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="reviews">
+            <h2 class="section-title">Reviews From my Teachers</h2>
+            <div class="review-cards-container">
+                <div class="review-card">
+                    <p class="review-text">Hoang was a brilliant student, he could do something many hours until he figure out the answer</p>
+                    <p class="reviewer">Nguyen Thi Thuy Loan<br>Assoc. Prof</p>
+                    <img src="c.jpg" alt="Reviewer Image" style="width: 70px; height: 80px;">
+                </div>
+                
+                <div class="review-card">
+                    <p class="review-text">He will be and always my best student</p>
+                    <p class="reviewer">Le Duy Tan <br>Dr</p>
+                    <img src="n.png" alt="Reviewer Image" style="width: 70px; height: 80px;">
+                </div>
+            </div>
+  
+    
+    <footer>
+        © all rights reserved 2025
+    </footer>
+
+    <script>
+        // Function to handle responsive reviews
+        function updateReviews() {
+            const isMobile = window.innerWidth < 768;
+            const reviewCards = document.querySelectorAll('.review-card');
+            
+            if (isMobile) {
+                // Show only first review on mobile
+                reviewCards.forEach((card, index) => {
+                    card.style.display = index === 0 ? 'block' : 'none';
+                });
+            } else {
+                // Show all reviews on desktop
+                reviewCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+            }
+        }
+        
+        // Run on load and resize
+        window.addEventListener('load', updateReviews);
+        window.addEventListener('resize', updateReviews);
+    </script>
+</body>
+</html>
